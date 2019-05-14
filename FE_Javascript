@@ -1,0 +1,22 @@
+//Ratih Kusuma Dewi
+
+function appendChildren(decorateDivFunction) {
+  var allDivs = document.getElementsByTagName("div");
+  var allLength = allDivs;
+
+  for (var i = 0; i < allLength; i++) {
+    var newDiv = document.createElement("div");
+    decorateDivFunction(newDiv);
+    allDivs[i].appendChild(newDiv);
+  }
+}
+
+// Example case. 
+document.body.innerHTML = `
+<div id="a">
+  <div id="b">
+  </div>
+</div>`;
+
+//appendChildren(function(div) {});
+console.log(document.body.innerHTML);
